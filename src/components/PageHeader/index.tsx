@@ -12,7 +12,7 @@ interface PageHeaderProps {
   logoHeader: string;
   title: string;
   description: string;
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({
