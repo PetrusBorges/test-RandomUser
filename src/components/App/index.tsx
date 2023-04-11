@@ -4,7 +4,7 @@ import ReactRoutes from '../../routes';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../../assets/styles/global';
 
-import { ThemeButton, Header } from '../../components/index';
+import { ThemeButton, Header, Footer } from '../../components/index';
 
 import useChangeTheme from '../../hooks/useChangeTheme';
 
@@ -25,6 +25,7 @@ const App = () => {
         />
         <Header />
         <ReactRoutes />
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );
