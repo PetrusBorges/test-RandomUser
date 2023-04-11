@@ -1,0 +1,37 @@
+import { createGlobalStyle } from 'styled-components';
+
+export default createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+  }
+
+  body {
+    font-size: 16px;
+    background: ${({ theme }) => theme.background};
+    transition: background 0.3s linear;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #fd0;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fd0;
+    border-radius: 20px;
+  }
+`;
