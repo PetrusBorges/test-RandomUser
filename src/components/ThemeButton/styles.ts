@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.button`
   line-height: 0;
-  position: absolute;
+  position: fixed;
   bottom: 16px;
   right: 16px;
   width: 46px;
