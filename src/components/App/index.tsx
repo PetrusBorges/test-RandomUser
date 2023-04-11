@@ -1,3 +1,6 @@
+import { BrowserRouter } from 'react-router-dom';
+import ReactRoutes from '../../routes';
+
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../../assets/styles/global';
 
@@ -13,14 +16,16 @@ const App = () => {
   } = useChangeTheme();
 
   return (
-    <ThemeProvider theme={currentTheme}>
-      <GlobalStyles />
-      <ThemeButton
-        selectedTheme={theme}
-        onClick={handleToggleTheme}
-      />
-      <h1>opa</h1>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={currentTheme}>
+        <GlobalStyles />
+        <ThemeButton
+          selectedTheme={theme}
+          onClick={handleToggleTheme}
+        />
+        <ReactRoutes />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 
