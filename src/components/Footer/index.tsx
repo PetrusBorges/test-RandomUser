@@ -26,7 +26,7 @@ const Footer = () => {
         <Content>
           <Link to='/'>
             <img src={Logo} alt="Logo" />
-          DAILY BLOG.
+          RandomUser.
           </Link>
 
           <ContainerNavigation>
