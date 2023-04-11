@@ -1,7 +1,16 @@
+import PageHeaderUser from '../../assets/icons/pageHeaderUsers.svg';
+
+import { PageHeader, SvgElipse } from '../../components';
+
 const Home = () => {
   return (
     <>
-      <h1>home</h1>
+      <SvgElipse />
+      <PageHeader
+        logoHeader={PageHeaderUser}
+        title='Usuários'
+        description='Veja todos os usuários cadastrados!'
+      />
     </>
   );
 };
