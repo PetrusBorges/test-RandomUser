@@ -17,8 +17,8 @@ const useHome = () => {
   const filteredUsersByAlphabet = useCallback(() => {
     api.get('?results=50')
       .then(cardResponse => {
-        const sortedUsers = cardResponse.data.sort(( firstName: UserCardInfo, secondName: UserCardInfo ) => {
-          if (firstName.name.first < secondName.name.last) {
+        const sortedUsers = cardResponse.data.results.sort(( firstName: UserCardInfo, secondName: UserCardInfo ) => {
+          if (firstName.name.first < secondName.name.first) {
             return -1;
           } else {
             return 1;
