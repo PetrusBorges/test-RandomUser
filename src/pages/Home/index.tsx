@@ -1,8 +1,14 @@
 import PageHeaderUser from '../../assets/icons/pageHeaderUsers.svg';
 
-import { PageHeader, SvgElipse } from '../../components';
+import { PageHeader, SvgElipse, UserCard } from '../../components';
+
+import useHome from '../../hooks/useHome';
 
 const Home = () => {
+  const {
+    userCard,
+  } = useHome();
+
   return (
     <>
       <SvgElipse />
@@ -10,6 +16,10 @@ const Home = () => {
         logoHeader={PageHeaderUser}
         title='Usuários'
         description='Veja todos os usuários cadastrados!'
+      />
+
+      <UserCard
+        userCard={userCard}
       />
     </>
   );
