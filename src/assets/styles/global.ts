@@ -27,11 +27,11 @@ export default createGlobalStyle`
   }
 
   body::-webkit-scrollbar-track {
-    background: #fd0;
+    background: ${({ theme }) => theme.background};
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: #fd0;
+    background-color: ${({ theme }) => theme.color.blueLight};
     border-radius: 20px;
   }
 `;
