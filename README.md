@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/105453766/227587895-a5920b06-54f6-4f1b-a121-8e0f8decdb5a.png)
 
-DEPLOY da aplicação: [Teste prático FullStack](https://test-front-end-daily-blog.netlify.app)
+DEPLOY da aplicação: [Teste prático FullStack](https://test-randomuser.netlify.app)
 
 ## Demostração
 https://user-images.githubusercontent.com/105453766/231512678-56022a70-90af-4a7b-9826-5c14c1228b6d.mp4
