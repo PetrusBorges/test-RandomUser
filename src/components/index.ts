@@ -8,6 +8,8 @@ import SvgElipse from './SvgElipse';
 import PageHeader from './PageHeader';
 import UserCard from './UserCard';
 import Spinner from './Spinner';
+import SvgTecnologies from './SvgTecnologies';
+import AboutInfo from './AboutInfo';
 
 export {
   App,
@@ -20,4 +22,6 @@ export {
   PageHeader,
   UserCard,
   Spinner,
+  SvgTecnologies,
+  AboutInfo,
 };
