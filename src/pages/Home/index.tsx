@@ -6,6 +6,7 @@ import useHome from '../../hooks/useHome';
 
 const Home = () => {
   const {
+    isLoading,
     userCard,
     handleSelectChange,
   } = useHome();
@@ -22,6 +23,7 @@ const Home = () => {
 
       <UserCard
         userCard={userCard}
+        isLoading={isLoading}
       />
     </>
   );
