@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Button } from '../../components/index';
+import { Button, RenderIf, Spinner } from '../../components/index';
 
 import { UserCardProps } from '../../types/userCard';
 
@@ -16,6 +16,7 @@ import {
 
 const UserCard: React.FC<UserCardProps> = ({
   userCard,
+  isLoading,
 }) => {
   const [click, setClick] = useState(userCard.map(() => false));
 
@@ -29,49 +30,55 @@ const UserCard: React.FC<UserCardProps> = ({
 
   return (
     <Container>
-      <Content>
-        {userCard.map((userCard, index) => (
-          <UserCardContainer
-            key={userCard.login.uuid}
-          >
-            <img src={userCard.picture.large} alt="UserPhoto" />
-            <p>{userCard.name.first}{userCard.name.last}</p>
-            <small>@{userCard.login.username}</small>
+      <RenderIf condition={isLoading}>
+        <Spinner size={30} />
+      </RenderIf>
 
-            <Button
-              type='button'
-              onClick={() => handleCardClick(index)}
+      <RenderIf condition={!isLoading}>
+        <Content>
+          {userCard.map((userCard, index) => (
+            <UserCardContainer
+              key={userCard.login.uuid}
             >
-              Ver detalhes
-            </Button>
+              <img src={userCard.picture.large} alt="UserPhoto" />
+              <p>{userCard.name.first}{userCard.name.last}</p>
+              <small>@{userCard.login.username}</small>
 
-            {click[index] && (
-              <UserCardContainerInfo>
-                <UserInfoContainer>
-                  <small>Email:</small>
-                  <p>{userCard.email}</p>
-                </UserInfoContainer>
-                <UserInfoContainer>
-                  <small>Aniversário:</small>
-                  <p>{formatBirthday(userCard.dob.date)}</p>
-                </UserInfoContainer>
-                <UserInfoContainer>
-                  <small>Endereço:</small>
-                  <p>{userCard.location.street.number} {userCard.location.street.name}</p>
-                </UserInfoContainer>
-                <UserInfoContainer>
-                  <small>Telefone:</small>
-                  <p>{userCard.phone}</p>
-                </UserInfoContainer>
-                <UserInfoContainer>
-                  <small>Senha:</small>
-                  <p>{userCard.login.password}</p>
-                </UserInfoContainer>
-              </UserCardContainerInfo>
-            )}
-          </UserCardContainer>
-        ))}
-      </Content>
+              <Button
+                type='button'
+                onClick={() => handleCardClick(index)}
+              >
+              Ver detalhes
+              </Button>
+
+              {click[index] && (
+                <UserCardContainerInfo>
+                  <UserInfoContainer>
+                    <small>Email:</small>
+                    <p>{userCard.email}</p>
+                  </UserInfoContainer>
+                  <UserInfoContainer>
+                    <small>Aniversário:</small>
+                    <p>{formatBirthday(userCard.dob.date)}</p>
+                  </UserInfoContainer>
+                  <UserInfoContainer>
+                    <small>Endereço:</small>
+                    <p>{userCard.location.street.number} {userCard.location.street.name}</p>
+                  </UserInfoContainer>
+                  <UserInfoContainer>
+                    <small>Telefone:</small>
+                    <p>{userCard.phone}</p>
+                  </UserInfoContainer>
+                  <UserInfoContainer>
+                    <small>Senha:</small>
+                    <p>{userCard.login.password}</p>
+                  </UserInfoContainer>
+                </UserCardContainerInfo>
+              )}
+            </UserCardContainer>
+          ))}
+        </Content>
+      </RenderIf>
     </Container>
   );
 };
