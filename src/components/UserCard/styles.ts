@@ -54,3 +54,23 @@ export const UserCardContainer = styled.div`
     margin-bottom: 18px;
   }
 `;
+
+export const UserCardContainerInfo = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 18px;
+  gap: 8px;
+  color: ${({ theme }) => theme.textColor};
+`;
+
+export const UserInfoContainer = styled.div`
+  > small {
+    color: ${({ theme }) => theme.color.blueLight};
+  }
+
+  > p {
+    font-size: 14px;
+  }
+`;
