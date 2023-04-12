@@ -6,6 +6,7 @@ import Button from './Button';
 import Footer from './Footer';
 import SvgElipse from './SvgElipse';
 import PageHeader from './PageHeader';
+import UserCard from './UserCard';
 
 export {
   App,
@@ -16,4 +17,5 @@ export {
   Footer,
   SvgElipse,
   PageHeader,
+  UserCard,
 };
