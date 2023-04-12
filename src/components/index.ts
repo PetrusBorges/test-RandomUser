@@ -7,6 +7,8 @@ import Footer from './Footer';
 import SvgElipse from './SvgElipse';
 import PageHeader from './PageHeader';
 import UserCard from './UserCard';
+import ReactPortal from './ReactPortal';
+import Modal from './Modal';
 
 export {
   App,
@@ -18,4 +20,6 @@ export {
   SvgElipse,
   PageHeader,
   UserCard,
+  ReactPortal,
+  Modal,
 };
