@@ -7,6 +7,7 @@ import useHome from '../../hooks/useHome';
 const Home = () => {
   const {
     userCard,
+    handleSelectChange,
   } = useHome();
 
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         logoHeader={PageHeaderUser}
         title='Usuários'
         description='Veja todos os usuários cadastrados!'
+        onChange={handleSelectChange}
       />
 
       <UserCard
