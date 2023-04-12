@@ -57,5 +57,5 @@ export interface UserCardInfo {
 
 export interface UserCardProps {
   userCard: UserCardInfo[];
-  handleToggleModal?: (id: number) => void;
+  isLoading: boolean;
 }
