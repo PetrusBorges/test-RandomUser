@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useLocation } from 'react-router-dom';
+
 import {
   Container,
   Content,
@@ -21,6 +23,8 @@ const PageHeader: React.FC<PageHeaderProps> = ({
   description,
   onChange,
 }) => {
+  const location = useLocation();
+
   return (
     <Container>
       <Content>
@@ -33,10 +37,12 @@ const PageHeader: React.FC<PageHeaderProps> = ({
           <p>{description}</p>
         </ContainerInfo>
 
-        <Select onChange={onChange}>
-          <option value="filteredUsersByFetchData">Filtrar por Padrão</option>
-          <option value="filteredUsersByAlphabet">Filtrar por ordem alfabética</option>
-        </Select>
+        {location.pathname === '/about' ? null : (
+          <Select onChange={onChange}>
+            <option value="filteredUsersByFetchData">Filtrar por Padrão</option>
+            <option value="filteredUsersByAlphabet">Filtrar por ordem alfabética</option>
+          </Select>
+        )}
       </Content>
     </Container>
   );
