@@ -6,15 +6,24 @@ import { api } from '../utils/api';
 
 const useHome = () => {
   const [userCard, setUserCard] = useState<UserCardInfo[]>([]);
+  const [isLoading, setIsloading] = useState(false);
 
-  const filteredUsersByFetchData = useCallback(() => {
+  const filteredUsersByFetchData = useCallback(async () => {
+    setIsloading(true);
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
     api.get('?results=50')
       .then(cardResponse => {
         setUserCard(cardResponse.data.results);
       });
+
+    setIsloading(false);
   }, []);
 
-  const filteredUsersByAlphabet = useCallback(() => {
+  const filteredUsersByAlphabet = useCallback(async () => {
+    setIsloading(true);
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
     api.get('?results=50')
       .then(cardResponse => {
         const sortedUsers = cardResponse.data.results.sort(( firstName: UserCardInfo, secondName: UserCardInfo ) => {
@@ -26,6 +35,8 @@ const useHome = () => {
         });
         setUserCard(sortedUsers);
       });
+
+    setIsloading(false);
   }, []);
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -46,6 +57,7 @@ const useHome = () => {
   }, [filteredUsersByFetchData]);
 
   return {
+    isLoading,
     userCard,
     handleSelectChange,
   };
