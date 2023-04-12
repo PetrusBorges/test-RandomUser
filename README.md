@@ -15,10 +15,10 @@ A equipe recebeu uma demanda para desenvolver um sistema web para uma API RESTfu
 
 ## Como usar a aplicação
 
-- Para clonar o projeto, acessar a pasta, atualizar as dependências e rodar o projeto no `http://localhost:5173` basta inserir o comando abixo no seu terminal:
+- Para clonar o projeto, acessar a pasta, atualizar as dependências e rodar o projeto no `http://localhost:5173` basta inserir o comando abaixo no seu terminal:
 
 ```sh
-git clone https://github.com/PetrusBorges/test-RandomUser.git && cd daily-blog && yarn && yarn dev
+git clone https://github.com/PetrusBorges/test-RandomUser.git && cd test-RandomUser && yarn && yarn dev
 ```
 
 ## Feito com
