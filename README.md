@@ -15,9 +15,9 @@ A equipe recebeu uma demanda para desenvolver um sistema web para uma API RESTfu
 
 ## Observações
 
-O projeto foi feito sem nenhuma dificuldade, usei React + Typescript por ser tecnologias que me sinto mais confortável em trabalhar, ainda não conhecia a API do `https://randomuser.me/` e foi bem legal trabalhar com ela e até mesmo explorar como ela funciona, pois a mesma cria usuários diferentes que podem permitir diversos tipos de estudos diferentes e mais apronfundados.
+O projeto foi concluído sem dificuldades, utilizando React + Typescript, pois são tecnologias com as quais me sinto confortável em trabalhar. Foi interessante trabalhar com a API do `https://randomuser.me/`, que permite criar diferentes usuários e possibilita estudos mais aprofundados em diversos tipos de cenários.
 
-De toda forma fico agradecido pela oportunidade de participar da seleção de Desenvolvedor FullStack. Agraço muito ao [Augusto Henrique](https://www.linkedin.com/in/augustohenriques/) e a [Colab](https://www.linkedin.com/company/colabapp/) por proporcionarem essa experiência bastante imerssiva!
+Agradeço pela oportunidade de participar da seleção de Desenvolvedor FullStack e expresso minha gratidão ao [Augusto Henrique](https://www.linkedin.com/in/augustohenriques/) e à [Colab](https://www.linkedin.com/company/colabapp/) por proporcionarem uma experiência imersiva!
 
 ## Como usar a aplicação
 
